@@ -1,9 +1,11 @@
 $primary-color: #ffff;
 body{
     background-color: white;
+    margin: 0;
 }
 .body{
     // background-image: url(/src/assets/background.jpg);
+    height: 100%;
     color: whitesmoke;
     background-size: 80vw;
     background-repeat: no-repeat;
@@ -109,6 +111,8 @@ body{
         }
     }
 }
+iframe{
+}
 .inputPrimary{
     display: block;
     padding: 5px 10px; 
@@ -132,23 +136,34 @@ body{
         }
     }
 }
-
-@media (max-width: 1150px) { 
-    .body{
-        background-color: white;
-        background-image: url(/src/assets/background-mob.jpeg);
-        background-size: 500px;
-
-    }
-    .header{
-        background-color: white;
+.gif-container{
+    text-align: center;
+    margin-top: 20vh;
+    .logo-gif{
+        width: 40%;
+        margin-top: auto;
+        margin-bottom: auto;
     }
 }
 
-@media (max-width: 450px) { 
+
+@media (max-width: 600px) { 
     .body{
-        background-image: url(/src/assets/background-mob.jpeg);
-        background-size: 100vw;
+        .logo-gif{
+            width: 70%;
+        }
 
     }
 }
+//     .header{
+//         background-color: white;
+//     }
+// }
+
+// @media (max-width: 450px) { 
+//     .body{
+//         background-image: url(/src/assets/background-mob.jpeg);
+//         background-size: 100vw;
+
+//     }
+// }

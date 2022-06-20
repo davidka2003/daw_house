@@ -4,8 +4,8 @@
     "dev": "webpack serve --config webpack.config.ts --mode development",
     "build": "webpack --config webpack.config.ts --mode production",
     "production": "webpack serve --config webpack.config.ts --mode production",
-    "blockchain": "npx hardhat node",
-    "deploy": "npx hardhat run scripts/deploy.ts --network localhost"
+    "blockchain": "export SET NODE_OPTIONS=--openssl-legacy-provider && npx hardhat node",
+    "deploy": "export SET NODE_OPTIONS=--openssl-legacy-provider && npx hardhat run scripts/deploy.ts --network localhost"
   },
   "devDependencies": {
     "@babel/core": "^7.18.2",

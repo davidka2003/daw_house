@@ -8,19 +8,19 @@ import "../scss/mintingPage.scss";
 import logo from "../assets/logo.jpg";
 import background from "../assets/background.gif";
 import { DAWHouse } from "../types/typechain";
-import { abi } from "../../contracts/artifacts/DAW_house.json";
+import { abi } from "../../artifacts/contracts/DAW_house.sol/DAW_house.json";
 import { address as contractAddress } from "../.env/contract-address.json";
 const Iframe = () => {
   return (
     <>
-      <div style={{ padding: "100% 0 0 0", position: "relative" }}>
+      <div style={{ width:"80%"}}>
         <iframe
           src="https://player.vimeo.com/video/721871155?h=eced0fb92a&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
           frameBorder="0"
           allow="autoplay; fullscreen; picture-in-picture"
+          
           allowFullScreen
           style={{
-            position: "absolute",
             top: 0,
             left: 0,
             width: "100%",
@@ -99,6 +99,8 @@ const App = () => {
         abi,
         signer
       ) as DAWHouse;
+      console.log(contract.address)
+      console.log(signer)
       setContract(contract);
       setConnection(instance);
       setProvider(provider);
@@ -233,8 +235,8 @@ const App = () => {
           </>
         </div>
       )) || (
-        <div>
-          <img className="logo" src={background} alt="" />
+        <div className="gif-container">
+          <img className="logo-gif" src={background} alt="" />
         </div>
       )}
     </div>
