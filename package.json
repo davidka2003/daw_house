@@ -4,8 +4,10 @@
     "dev": "webpack serve --config webpack.config.ts --mode development",
     "build": "webpack --config webpack.config.ts --mode production",
     "production": "webpack serve --config webpack.config.ts --mode production",
-    "blockchain": "export SET NODE_OPTIONS=--openssl-legacy-provider && npx hardhat node",
-    "deploy": "export SET NODE_OPTIONS=--openssl-legacy-provider && npx hardhat run scripts/deploy.ts --network localhost"
+    "blockchain:ssl": "export SET NODE_OPTIONS=--openssl-legacy-provider && npx hardhat node",
+    "blockchain": "npx hardhat node",
+    "deploy:ssl": "export SET NODE_OPTIONS=--openssl-legacy-provider && npx hardhat run scripts/deploy.ts --network localhost",
+    "deploy": "npx hardhat run scripts/deploy.ts --network localhost"
   },
   "devDependencies": {
     "@babel/core": "^7.18.2",
@@ -27,6 +29,7 @@
     "@types/node": "^17.0.41",
     "@types/react": "^18.0.12",
     "@types/react-dom": "^18.0.5",
+    "@types/react-router-dom": "^5.3.3",
     "@typescript-eslint/eslint-plugin": "^4.33.0",
     "@typescript-eslint/parser": "^4.33.0",
     "babel-loader": "^8.2.5",
@@ -42,6 +45,7 @@
     "eslint-plugin-promise": "^5.2.0",
     "ethereum-waffle": "^3.4.4",
     "ethers": "^5.6.8",
+    "express": "^4.18.1",
     "fork-ts-checker-webpack-plugin": "^7.2.11",
     "hardhat": "^2.9.9",
     "hardhat-gas-reporter": "^1.0.8",
@@ -53,6 +57,7 @@
     "prettier-plugin-solidity": "^1.0.0-beta.13",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
+    "react-router-dom": "^6.3.0",
     "solhint": "^3.3.7",
     "solidity-coverage": "^0.7.21",
     "style-loader": "^3.3.1",
@@ -67,9 +72,18 @@
     "yarn": "^1.22.19"
   },
   "dependencies": {
+    "@types/axios": "^0.14.0",
+    "axios": "^0.27.2",
+    "base-path-converter": "^1.0.2",
+    "body-parser": "^1.20.0",
+    "ffmpeg-static": "^5.0.2",
+    "got": "^12.1.0",
     "mini-css-extract-plugin": "^2.6.1",
     "node-sass": "^7.0.1",
+    "recursive-fs": "^2.1.0",
     "sass-loader": "^13.0.0",
-    "scss-loader": "^0.0.1"
+    "scss-loader": "^0.0.1",
+    "simple-thumbnail": "^1.6.5",
+    "video-previews": "^1.0.4"
   }
 }

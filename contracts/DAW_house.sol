@@ -153,7 +153,7 @@ contract DAW_house is ERC721, Ownable {
         returns (string memory)
     {
         require(
-            _exists(tokenId),
+            _exists(_tokenId),
             "ERC721Metadata: URI query for nonexistent token"
         );
         return bytes(_uris[_tokenId]).length > 0 ? _uris[_tokenId] : "";

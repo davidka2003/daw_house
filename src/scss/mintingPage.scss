@@ -34,6 +34,13 @@ body{
         justify-content: center;
         
     }
+    &__errorContainer{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        // margin-right: -40px;
+        color: red;
+    }
     
 }
 .mintingBody{
@@ -155,6 +162,7 @@ iframe{
 
     }
 }
+
 //     .header{
 //         background-color: white;
 //     }
