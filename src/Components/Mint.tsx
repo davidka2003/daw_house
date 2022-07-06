@@ -148,7 +148,7 @@ const App = () => {
             alt=""
           />
         </div>
-        <div className="header__errorContainer"> {error && <p>{error}</p>}</div>
+        
         <div className="header__buttonContainer">
           {address && (
             <p style={{ marginRight: "10px" }}>
@@ -249,6 +249,7 @@ const App = () => {
           <img className="logo-gif" src={background} alt="" />
         </div>
       )}
+      <div className="errorContainer"> {error && <p>{error}</p>}</div>
     </div>
   );
 };

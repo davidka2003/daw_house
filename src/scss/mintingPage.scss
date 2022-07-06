@@ -153,6 +153,17 @@ iframe{
     }
 }
 
+.errorContainer{
+    position: fixed;
+    color: red;
+    margin: 0;
+    right: 30;
+    bottom: 30;
+    background-color: transparent;
+    p{
+        margin: 0;
+    }
+}
 
 @media (max-width: 600px) { 
     .body{

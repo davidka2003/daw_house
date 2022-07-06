@@ -1,0 +1,135 @@
+$primary-color: #ffff;
+body{
+    background-color: black;
+    margin: 0;
+}
+.body{
+    // background-image: url(/src/assets/background.jpg);
+    height: 100%;
+    color: whitesmoke;
+    background-size: 80vw;
+    background-repeat: no-repeat;
+    background-color: white;
+    background-position: bottom ;
+}
+.header{
+    background-color: black;
+    // border-bottom: solid 1.5px rgb(198, 198, 198);
+    height: 70px;
+    justify-content: space-between;
+    display: flex;
+    padding-left: 15px;
+    padding-right: 15px;
+    
+    &__logoContainer{
+        display: flex;
+        width: 50px;
+        .logo{
+            max-height: 80%;
+        }
+    }
+    &__buttonContainer{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    &__errorContainer{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        // margin-right: -40px;
+        color: red;
+    }
+    
+}
+
+.buttonPrimary{
+    margin: 0 auto;
+    display: block;
+    padding: 5px 10px; 
+    outline: none;
+    font-weight: bold;
+    border: solid 1px;
+    border-radius: 5px;
+    border: solid 1.5px whitesmoke;
+    color: whitesmoke;
+    background-color: rgb(19,	14,	15	);
+    transition: all 0.3s ease-in-out;
+    &:hover{
+        cursor: pointer;
+        border: solid 1.5px #d8d8d8;
+    }
+    &:disabled{
+        border: solid 1.5px #d1d1d1;
+        color: #bfbfbf;
+        &:hover{
+            cursor: default;
+            border: solid 1.5px #d1d1d1;
+        }
+    }
+}
+
+.errorContainer{
+    position: fixed;
+    color: red;
+    margin: 0;
+    right: 30;
+    bottom: 30;
+    background-color: transparent;
+    p{
+        margin: 0;
+    }
+}
+.link-container{
+    display: flex;  
+    justify-items: center;
+    justify-content: center;
+    height: calc(96vh - 70px);
+    .link-raw{
+        margin-top: auto;
+        margin-bottom: auto;
+        max-width: 50%;
+        .links{
+            filter: blur(3px);
+
+            text-align: center;
+            padding: 10px 90px;
+            
+            background-color: white;
+            outline: none;
+            font-weight: bold;
+            border: solid 1px;
+            border-radius: 10px;
+            border: solid 1.5px whitesmoke;
+            color: whitesmoke;
+            background-color: rgb(19,	14,	15	);
+            transition: all 0.3s ease-in-out;
+            margin: 10px;
+            &:hover{
+                cursor: pointer;
+                border: solid 1.5px #d8d8d8;
+                filter: blur(0px);
+                transform: translateY(2px);
+            }
+        }
+    }
+    
+    
+    .links{
+        
+    }
+}
+
+@media screen and (max-width: 500px){
+    .link-container{
+       
+        .link-raw{
+            .links{
+                padding: 10px 60px;
+            }
+        }
+    }
+    
+    
+}
